@@ -1,0 +1,150 @@
+/* =============== RESET =============== */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* =============== END RESET =============== */
+
+
+/* =============== GENERAL =============== */
+
+
+body {
+	font-family: 'Carme', sans-serif;
+	background: #FFFADD;
+}
+
+.container {
+	margin: 0 auto;
+}
+
+h1 {
+	text-align: center;
+	font-family: 'Carme', sans-serif;
+	font-size: 9em;
+	font-weight: bold;
+}
+
+h2 {
+	margin: 0 0 10px 10px;
+	font-family: 'Carme', sans-serif;
+	font-size: 4em;
+	font-weight: bold;
+	padding: 5px;
+}
+
+/* div {
+	padding: 15px;
+}
+ */
+p {
+	margin: 10px 0;
+}
+
+.padextra {
+	padding: 15px;
+}
+
+
+/* =============== HEADER =============== */
+
+.header {
+	background: #FFFADD;
+}
+
+.nav {
+	position: absolute;
+	top: 175px;
+	left: 0;
+	padding: 5px;
+	background: black;
+	color: white;
+}
+
+.nav li {
+	list-style: none;
+	font-size: 28px;
+	display: block;
+	padding: 5px;
+}
+
+/* =============== MUSIC =============== */
+
+.music {
+	background: #FC5C47;
+}
+
+.music li {
+	margin-left: 20px;
+	font-size: 1.5em;
+	line-height: 1.5em;
+	color: white;
+}
+
+/* =============== PHOTOS =============== */
+
+.photos {
+	background: #6dbcdb;
+}
+
+
+/* =============== BIO =============== */
+
+.bio {
+	background: #d7dadb;
+}
+
+.bio p {
+	line-height: 1.125em;
+}
+
+/* =============== FOOTER =============== */
+
+.footer {
+	background: #000;
+	color: white;
+	text-align: center;
+	font-size: .75em ;
+	line-height: 1.5em;
+}
