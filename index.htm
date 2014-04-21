@@ -106,20 +106,5 @@
 
 </div>
 
-		<script>
-			$.getJSON('http://api.flickr.com/services/rest/?&amp;method=flickr.photosets.getPhotos&amp;api_key=' + 946a0b8ec3a8731bcea9f874e4b3f865 + '&amp;format=json&amp;jsoncallback=?',
-				{
-				tags: "spectralwolf",
-				tagmode: "any",
-				format: "json"
-				},
-				function(data) {
-				$.each(data.items, function(i,item){
-				  $("<img/>").attr("src", item.media.m).appendTo("#photos");
-				  if ( i == 8 ) return false;
-				});
-			});
-		</script>
-
 </body>
 </html>
