@@ -12,6 +12,7 @@
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
 
 	<link rel="stylesheet" type="text/css" href="../css/mp3-player-button.css" />
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 	<script src="/js/soundmanager2.js"></script>
 	<script type="text/javascript" src="/js/mp3-player-button.js"></script>
 	<script>
@@ -105,6 +106,26 @@
 
 </div>
 	
+
+	http://api.flickr.com/services/rest/?&amp;method=flickr.people.getPublicPhotos&amp;api_key=' + apiKey + '&amp;user_id=29096781@N02&amp;per_page=15&amp;page=2&amp;format=json&amp;jsoncallback=?
+	
+	$.getJSON('http://api.flickr.com/services/rest/?&amp;method=flickr.photosets.getPhotos&amp;api_key=' + 946a0b8ec3a8731bcea9f874e4b3f865 + '&amp;format=json&amp;jsoncallback=?',
+
+
+		<script>
+			$.getJSON('http://api.flickr.com/services/rest/?&amp;method=flickr.photosets.getPhotos&amp;api_key=' + 946a0b8ec3a8731bcea9f874e4b3f865 + '&amp;format=json&amp;jsoncallback=?',
+				{
+				tags: "spectralwolf",
+				tagmode: "any",
+				format: "json"
+				},
+				function(data) {
+				$.each(data.items, function(i,item){
+				  $("<img/>").attr("src", item.media.m).appendTo("#photos");
+				  if ( i == 8 ) return false;
+				});
+			});
+		</script>
 
 </body>
 </html>
