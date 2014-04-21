@@ -105,13 +105,7 @@
 	    $img.wrap($imgLink);
 	    });
 	}).done(function(){
-		$.getScript = function(url, callback){
-	$.ajax({
-	type: "GET",
-	url: 'js/slimbox2.js',
-	success: callback,
-	dataType: "script"
-	})
+		$.getScript('js/slimbox2.js',function(){}, true);
 	});
 </script>
 
