@@ -135,7 +135,9 @@ p {
 .photos {
 	background: #6dbcdb;
 }
-
+.photos img {
+	padding: 0 4px;
+}
 
 /* =============== BIO =============== */
 
