@@ -14,6 +14,7 @@
 	<link rel="stylesheet" type="text/css" href="../css/mp3-player-button.css" />
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 	<script src="/js/soundmanager2.js"></script>
+	<script src="/js/slimbox2.js"></script>
 	<script type="text/javascript" src="/js/mp3-player-button.js"></script>
 	<script>
 	soundManager.setup({
@@ -105,6 +106,16 @@
 		</div>
 
 </div>
+
+<script>
+	$.getJSON("http://api.flickr.com/services/rest/?format=json&method=flickr.photosets.getPhotos&photoset_id=72157644141194651&per_page=1000&page=1&api_key=946a0b8ec3a8731bcea9f874e4b3f865&user_id=114592743@N05&extras=url_sq,url_m,url_o&jsoncallback=?", function(data){
+	  $.each(data.photoset.photo,function(it,item){
+	    var $img = $('<img/>').attr('src',item.url_sq).appendTo('body');
+	    var $imgLink = $('<a/>').attr('href',item.url_m).attr('rel','lightbox');
+	    $img.wrap($imgLink);
+	  });
+	});
+</script>
 
 </body>
 </html>
