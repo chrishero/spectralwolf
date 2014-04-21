@@ -97,17 +97,28 @@
 
 </div>
 
- <script>
+<script>
   	$.getJSON("http://api.flickr.com/services/rest/?format=json&method=flickr.photosets.getPhotos&photoset_id=72157644141194651&per_page=1000&page=1&api_key=946a0b8ec3a8731bcea9f874e4b3f865&user_id=114592743@N05&extras=url_sq,url_m,url_o&jsoncallback=?", function(data){
   	  $.each(data.photoset.photo,function(it,item){
   	    var $img = $('<img/>').attr('src',item.url_sq).appendTo('#photos');
   	    var $imgLink = $('<a/>').attr('href',item.url_m).attr('rel','lightbox-sw');
   	    $img.wrap($imgLink);
   	    });
-  	}).done(function(){
- 		$("a[rel^='js/slimbox2.js']").slimbox();
   	});
-  </script>
+</script>
+
+<script type="text/javascript">
+	function downloadJSAtOnload() {
+		var element = document.createElement("script");
+		element.src = "js/slimbox2.js";
+	document.body.appendChild(element);
+	}
+	if (window.addEventListener)
+	window.addEventListener("load", downloadJSAtOnload, false);
+	else if (window.attachEvent)
+	window.attachEvent("onload", downloadJSAtOnload);
+	else window.onload = downloadJSAtOnload;
+</script>
 
 </body>
 </html>
