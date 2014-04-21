@@ -11,6 +11,11 @@
 	cursor: pointer;
 }
 
+#lbcenter {
+	max-width: 80%;
+	max-height: 80%;
+}
+
 #lbCenter, #lbBottomContainer {
 	position: absolute;
 	z-index: 9999;
