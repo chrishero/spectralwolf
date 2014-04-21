@@ -10,7 +10,17 @@
 	<link href='http://fonts.googleapis.com/css?family=Carme' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Signika+Negative' rel='stylesheet' type='text/css'>
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+
+	<link rel="stylesheet" type="text/css" href="../css/mp3-player-button.css" />
 	<script src="../js/soundmanager2-nodebug-jsmin.js"></script>
+	<script type="text/javascript" src="../js/mp3-player-button.js"></script>
+	<script>
+	soundManager.setup({
+	  // required: path to directory containing SM2 SWF files
+	  url: '../swf/'
+	});
+	</script>
+
   	<meta name="viewport" content="width=device-width; initial-scale=1.0">
 
 </head>
@@ -90,14 +100,6 @@
 		</div>
 
 </div>
-
-		<script>
-soundManager.setup({
-  useFlashBlock: false, // optional - if used, required flashblock.css
-  url: '../swf/' // required: path to directory containing SM2 SWF files
-});
-</script>
-
 	
 
 </body>
