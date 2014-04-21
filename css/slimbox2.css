@@ -24,6 +24,9 @@
 
 #lbImage {
 	position: absolute;
+	display: block;
+	max-width: 100%;
+	height: auto;
 	left: 0;
 	top: 0;
 	border: 10px solid #fff;
